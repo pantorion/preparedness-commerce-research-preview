@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vorsorge ohne Panik — Master Research Synthesis</title>
+  <meta name="description" content="Visualisierte Master Research Synthesis für eine moderne Preparedness-Commerce-Marke in Deutschland." />
+  <style>
+    :root {
+      --paper: #f6f3ee;
+      --paper-2: #ebe6dc;
+      --ink: #171612;
+      --muted: #686257;
+      --soft: #fffaf1;
+      --line: rgba(23, 22, 18, .12);
+      --line-strong: rgba(23, 22, 18, .22);
+      --green: #435b43;
+      --green-2: #23362b;
+      --sage: #d8e0d2;
+      --sand: #e7d5b6;
+      --amber: #c98943;
+      --blue: #386073;
+      --danger: #a84e3d;
+      --white: #fffdf8;
+      --radius: 28px;
+      --radius-sm: 16px;
+      --shadow: 0 30px 80px rgba(33, 26, 16, .10), 0 8px 28px rgba(33, 26, 16, .08);
+      --max: 1180px;
+      --serif: ui-serif, Georgia, "Times New Roman", serif;
+      --sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 6%, rgba(216, 224, 210, .86), transparent 34rem),
+        radial-gradient(circle at 90% 10%, rgba(231, 213, 182, .62), transparent 30rem),
+        linear-gradient(180deg, var(--paper) 0%, #fbf7ef 42%, #eee7da 100%);
+      letter-spacing: -0.02em;
+    }
+
+    a { color: inherit; }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(24px) saturate(160%);
+      background: rgba(246, 243, 238, .78);
+      border-bottom: 1px solid rgba(23, 22, 18, .08);
+    }
+    .topbar-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 14px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .brandmark {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    .brandmark .dot {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background:
+        linear-gradient(135deg, var(--green), var(--green-2));
+      position: relative;
+      box-shadow: inset 0 0 0 6px rgba(255,255,255,.28);
+    }
+    .nav {
+      display: flex;
+      gap: 18px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .nav a { text-decoration: none; }
+    .nav a:hover { color: var(--ink); }
+
+    .hero {
+      min-height: calc(100vh - 58px);
+      display: grid;
+      place-items: center;
+      padding: 76px 22px 54px;
+    }
+    .hero-grid {
+      max-width: var(--max);
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1.04fr .96fr;
+      gap: 52px;
+      align-items: center;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 13px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 253, 248, .55);
+      color: var(--green-2);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .02em;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 0 5px rgba(67,91,67,.12);
+    }
+    h1 {
+      margin: 24px 0 18px;
+      font-size: clamp(48px, 8vw, 104px);
+      line-height: .92;
+      letter-spacing: -0.075em;
+      max-width: 920px;
+    }
+    .hero-sub {
+      max-width: 650px;
+      font-size: clamp(19px, 2.5vw, 28px);
+      line-height: 1.22;
+      color: var(--muted);
+      letter-spacing: -0.04em;
+    }
+    .hero-sub strong { color: var(--ink); font-weight: 750; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 999px;
+      font-weight: 750;
+      font-size: 15px;
+      text-decoration: none;
+      border: 1px solid transparent;
+      transition: transform .22s ease, background .22s ease, border-color .22s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: var(--green-2); color: var(--white); }
+    .btn-secondary { background: rgba(255,253,248,.55); border-color: var(--line); color: var(--ink); }
+
+    .kit-visual {
+      min-height: 600px;
+      border-radius: 42px;
+      background:
+        linear-gradient(145deg, rgba(255,253,248,.84), rgba(231,213,182,.54)),
+        radial-gradient(circle at 70% 20%, rgba(67,91,67,.20), transparent 18rem);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,.7);
+      position: relative;
+      overflow: hidden;
+      padding: 34px;
+    }
+    .kit-box {
+      position: absolute;
+      left: 50%;
+      top: 49%;
+      transform: translate(-50%, -50%) rotate(-2deg);
+      width: min(360px, 74%);
+      height: 430px;
+      border-radius: 30px;
+      background: linear-gradient(160deg, #f3eee4, #d5c2a2);
+      box-shadow: 0 44px 70px rgba(76, 53, 27, .20), inset 0 1px 0 rgba(255,255,255,.8);
+      border: 1px solid rgba(73, 53, 32, .15);
+    }
+    .kit-label {
+      position: absolute;
+      inset: 42px 38px auto 38px;
+      height: 142px;
+      border-radius: 20px;
+      background: var(--green-2);
+      color: var(--white);
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .kit-label small { color: rgba(255,255,255,.66); font-family: var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+    .kit-label strong { font-size: 30px; letter-spacing: -0.055em; line-height: .95; }
+    .kit-stripes {
+      position: absolute; left: 38px; right: 38px; bottom: 40px;
+      display: grid; gap: 10px;
+    }
+    .stripe { height: 16px; border-radius: 999px; background: rgba(35,54,43,.16); }
+    .stripe:nth-child(2) { width: 76%; background: rgba(56,96,115,.16); }
+    .stripe:nth-child(3) { width: 58%; background: rgba(201,137,67,.18); }
+    .floating-card {
+      position: absolute;
+      background: rgba(255,253,248,.83);
+      border: 1px solid rgba(23,22,18,.10);
+      border-radius: 20px;
+      padding: 16px;
+      box-shadow: 0 14px 42px rgba(33, 26, 16, .10);
+      backdrop-filter: blur(16px);
+      max-width: 220px;
+    }
+    .floating-card b { display:block; font-size: 13px; margin-bottom: 5px; }
+    .floating-card span { display:block; font-size: 12px; line-height: 1.35; color: var(--muted); }
+    .fc-1 { top: 34px; right: 28px; }
+    .fc-2 { bottom: 58px; left: 28px; }
+    .fc-3 { bottom: 34px; right: 42px; }
+
+    section { padding: 92px 22px; }
+    .wrap { max-width: var(--max); margin: 0 auto; }
+    .section-head { display: grid; grid-template-columns: .8fr 1.2fr; gap: 34px; align-items: end; margin-bottom: 34px; }
+    .kicker { color: var(--green); font-weight: 800; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; }
+    h2 { font-size: clamp(36px, 5vw, 68px); line-height: .96; letter-spacing: -0.06em; margin: 8px 0 0; }
+    .lead { color: var(--muted); font-size: clamp(18px, 2vw, 24px); line-height: 1.25; letter-spacing: -0.035em; margin: 0; }
+
+    .thesis {
+      padding: 42px;
+      border-radius: 36px;
+      background: var(--green-2);
+      color: var(--white);
+      display: grid;
+      grid-template-columns: 1fr 1.35fr;
+      gap: 36px;
+      align-items: center;
+      box-shadow: var(--shadow);
+    }
+    .thesis .quote {
+      font-size: clamp(29px, 4.6vw, 56px);
+      line-height: .98;
+      letter-spacing: -0.06em;
+      font-weight: 800;
+    }
+    .thesis p { color: rgba(255,255,255,.72); font-size: 18px; line-height: 1.45; margin: 0; }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+    .panel {
+      background: rgba(255,253,248,.70);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 20px 60px rgba(33,26,16,.06);
+    }
+    .panel h3 { margin: 0 0 18px; font-size: 25px; line-height: 1; letter-spacing: -0.05em; }
+    .list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+    .list li {
+      display: grid;
+      grid-template-columns: 26px 1fr;
+      gap: 10px;
+      align-items: start;
+      color: var(--muted);
+      line-height: 1.35;
+    }
+    .list li::before {
+      content: "";
+      width: 18px; height: 18px; margin-top: 1px; border-radius: 50%;
+      background: var(--sage);
+      border: 5px solid rgba(255,253,248,.9);
+      box-shadow: 0 0 0 1px var(--line);
+    }
+    .weak li::before { background: #ead0c8; }
+    .list strong { color: var(--ink); }
+
+    .market-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .competitor {
+      min-height: 148px;
+      border-radius: 24px;
+      padding: 22px;
+      background: rgba(255,253,248,.64);
+      border: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .competitor b { font-size: 22px; letter-spacing: -0.045em; }
+    .competitor span { color: var(--muted); font-size: 14px; line-height: 1.35; }
+
+    .learn-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .learn-card {
+      border-radius: 26px;
+      padding: 24px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      min-height: 240px;
+      position: relative;
+      overflow: hidden;
+    }
+    .learn-card::after {
+      content: attr(data-num);
+      position: absolute;
+      right: 18px;
+      bottom: -6px;
+      font-size: 86px;
+      line-height: 1;
+      font-weight: 850;
+      letter-spacing: -0.08em;
+      color: rgba(23,22,18,.055);
+    }
+    .learn-card h3 { margin: 0 0 13px; font-size: 23px; line-height: 1; letter-spacing: -0.05em; position: relative; z-index: 1; }
+    .learn-card p { margin: 0; color: var(--muted); line-height: 1.42; position: relative; z-index: 1; }
+
+    .audience-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .audience {
+      padding: 26px;
+      border-radius: 28px;
+      background: linear-gradient(180deg, rgba(255,253,248,.82), rgba(255,253,248,.52));
+      border: 1px solid var(--line);
+    }
+    .audience .tag { font-family: var(--mono); color: var(--green); font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .audience h3 { font-size: 30px; letter-spacing: -.055em; line-height: .96; margin: 14px 0 10px; }
+    .audience p { margin: 0; color: var(--muted); line-height: 1.42; }
+
+    .product-road {
+      background: var(--ink);
+      color: var(--white);
+      border-radius: 42px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+    .product-road h2 { color: var(--white); max-width: 820px; margin-bottom: 12px; }
+    .product-road .lead { color: rgba(255,255,255,.66); max-width: 780px; margin-bottom: 28px; }
+    .mvp-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+    .mvp {
+      background: rgba(255,255,255,.075);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 22px;
+      padding: 18px;
+      min-height: 210px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .mvp small { font-family: var(--mono); color: rgba(255,255,255,.48); letter-spacing: .06em; }
+    .mvp b { font-size: 22px; line-height: 1; letter-spacing: -.05em; }
+    .mvp p { margin: 0; color: rgba(255,255,255,.62); font-size: 13px; line-height: 1.38; }
+
+    .positioning {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+    .claim-card {
+      border-radius: 42px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 44px;
+      box-shadow: var(--shadow);
+    }
+    .claim-card h2 { font-size: clamp(44px, 6vw, 88px); margin: 10px 0 18px; }
+    .claim-card p { font-size: 22px; line-height: 1.28; color: var(--muted); margin: 0; max-width: 650px; }
+    .rules {
+      border-radius: 42px;
+      background: var(--green-2);
+      color: var(--white);
+      padding: 32px;
+      display: grid;
+      align-content: center;
+    }
+    .rules h3 { margin: 0 0 18px; font-size: 30px; letter-spacing: -.055em; }
+    .rules ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 13px; }
+    .rules li { display: flex; justify-content: space-between; gap: 20px; border-bottom: 1px solid rgba(255,255,255,.13); padding-bottom: 12px; color: rgba(255,255,255,.76); }
+    .rules b { color: white; }
+
+    .moat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .moat {
+      border-radius: 26px;
+      padding: 24px;
+      background: rgba(255,253,248,.68);
+      border: 1px solid var(--line);
+      min-height: 170px;
+    }
+    .moat b { display: block; font-size: 22px; letter-spacing: -.045em; margin-bottom: 10px; }
+    .moat p { margin: 0; color: var(--muted); line-height: 1.38; }
+
+    .risk-plan { display: grid; grid-template-columns: .82fr 1.18fr; gap: 22px; }
+    .risk { background: #f4e8e3; }
+    .plan { background: var(--white); }
+    .steps { counter-reset: step; display: grid; gap: 10px; margin-top: 18px; }
+    .step {
+      counter-increment: step;
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 12px;
+      align-items: start;
+      padding: 13px;
+      border-radius: 16px;
+      background: rgba(23,22,18,.04);
+    }
+    .step::before {
+      content: counter(step);
+      width: 34px; height: 34px; border-radius: 50%;
+      display: grid; place-items: center;
+      background: var(--green-2); color: white; font-weight: 800; font-size: 13px;
+    }
+    .step b { display:block; margin-bottom: 3px; }
+    .step span { color: var(--muted); font-size: 14px; line-height: 1.35; }
+
+    .final {
+      padding-bottom: 120px;
+    }
+    .final-card {
+      min-height: 520px;
+      border-radius: 46px;
+      color: var(--white);
+      background:
+        linear-gradient(160deg, rgba(35,54,43,.96), rgba(23,22,18,.96)),
+        radial-gradient(circle at 80% 20%, rgba(201,137,67,.35), transparent 24rem);
+      padding: clamp(32px, 6vw, 70px);
+      display: grid;
+      align-content: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .final-card::after {
+      content: "";
+      position: absolute;
+      inset: auto -160px -240px auto;
+      width: 520px; height: 520px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.16);
+      box-shadow: inset 0 0 0 68px rgba(255,255,255,.035), inset 0 0 0 142px rgba(255,255,255,.025);
+    }
+    .final-card h2 { color: var(--white); max-width: 920px; position: relative; z-index: 1; }
+    .final-card p { color: rgba(255,255,255,.72); font-size: 23px; line-height: 1.32; max-width: 820px; position: relative; z-index: 1; }
+    .formula { display:flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; position: relative; z-index: 1; }
+    .formula span { padding: 10px 14px; border-radius: 999px; background: rgba(255,255,255,.10); border: 1px solid rgba(255,255,255,.13); color: rgba(255,255,255,.82); font-weight: 700; }
+
+    .footer { padding: 24px 22px 40px; color: var(--muted); font-size: 13px; }
+    .footer .wrap { display:flex; justify-content: space-between; gap: 20px; border-top: 1px solid var(--line); padding-top: 20px; }
+
+    /* Keep all content visible by default. The page should also look complete in full-page screenshots/exports. */
+    .reveal { opacity: 1; transform: none; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    @media (max-width: 980px) {
+      .nav { display: none; }
+      .hero-grid, .section-head, .thesis, .positioning, .risk-plan { grid-template-columns: 1fr; }
+      .kit-visual { min-height: 470px; }
+      .market-grid, .learn-grid, .audience-strip, .moat-grid { grid-template-columns: 1fr 1fr; }
+      .mvp-grid { grid-template-columns: 1fr 1fr; }
+      section { padding: 70px 18px; }
+    }
+    @media (max-width: 620px) {
+      .topbar-inner { padding: 12px 16px; }
+      .hero { padding: 52px 16px 30px; min-height: auto; }
+      .hero-grid { gap: 32px; }
+      .kit-visual { min-height: 420px; padding: 20px; border-radius: 30px; }
+      .floating-card { display: none; }
+      .market-grid, .learn-grid, .audience-strip, .moat-grid, .mvp-grid, .two-col { grid-template-columns: 1fr; }
+      .thesis, .claim-card, .rules, .product-road, .final-card { border-radius: 30px; padding: 26px; }
+      .panel { padding: 22px; border-radius: 24px; }
+      .footer .wrap { flex-direction: column; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .btn { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brandmark" href="#top"><span class="dot"></span><span>Preparedness Commerce</span></a>
+      <nav class="nav" aria-label="Sektionen">
+        <a href="#markt">Markt</a>
+        <a href="#usa">USA</a>
+        <a href="#produkt">Produkt</a>
+        <a href="#brand">Marke</a>
+        <a href="#next">30 Tage</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Master Research · 30.05.2026</div>
+          <h1>Vorsorge ohne Panik.</h1>
+          <p class="hero-sub"><strong>Die Chance:</strong> Krisenvorsorge als ruhiges, schönes und verständliches Haushaltssystem — nicht als Prepper-Shop, Army-Katalog oder Angstprodukt.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#synthesis">Die These sehen</a>
+            <a class="btn btn-secondary" href="#next">Nächste Schritte</a>
+          </div>
+        </div>
+        <div class="kit-visual" aria-label="Visualisierung einer modernen Vorsorge-Box">
+          <div class="floating-card fc-1"><b>Guided Commerce</b><span>3-Minuten-Check: Personen, Tage, Ort, Bedürfnisse.</span></div>
+          <div class="floating-card fc-2"><b>Lifecycle</b><span>MHD, Batterien, Filter und Erste Hilfe rechtzeitig erinnern.</span></div>
+          <div class="floating-card fc-3"><b>Trust Layer</b><span>BBK-orientiert, transparent, zivil, ohne Alarmismus.</span></div>
+          <div class="kit-box">
+            <div class="kit-label"><small>72h Zuhause</small><strong>Alles Wichtige. Klar sortiert.</strong></div>
+            <div class="kit-stripes"><div class="stripe"></div><div class="stripe"></div><div class="stripe"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="synthesis">
+      <div class="wrap reveal">
+        <div class="thesis">
+          <div class="kicker">Zentrale These</div>
+          <div class="quote">Massenfähig wird Vorsorge, wenn sie wie ein gutes Haushaltssystem wirkt.</div>
+          <p>Der deutsche Markt ist real, aber visuell und kommunikativ schwach besetzt. Viele Anbieter haben Sortiment, SEO und Conversion — aber kaum moderne Marke, Guided Commerce, Lifecycle, Design oder vertrauenswürdige Normalisierung.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="markt">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div><div class="kicker">Marktbild Deutschland</div><h2>Starkes Sortiment. Schwache Inszenierung.</h2></div>
+          <p class="lead">Die bestehenden Player beweisen Nachfrage — aber sie lassen Raum für eine Marke, die ruhiger, schöner und einfacher führt.</p>
+        </div>
+        <div class="market-grid reveal">
+          <div class="competitor"><b>ration1.de</b><span>Stärkster Performance-/Paket-Player. Gute Pakete, Trust, Conversion.</span></div>
+          <div class="competitor"><b>notvorsorge.com</b><span>Breit, SEO-stark, DACH-/Survival-/Zivilschutz-Positionierung.</span></div>
+          <div class="competitor"><b>Prepper-Shop.net</b><span>Thematisch tief, aber alt und nischig — Differenzierungsbeispiel.</span></div>
+          <div class="competitor"><b>Fluchtrucksack.de</b><span>Spezialisiert auf Notfallrucksack/Bug-out, eher Outdoor/Army.</span></div>
+          <div class="competitor"><b>Conserva / Dauerbrot</b><span>Food-/Langzeitnahrung, weniger ganzheitliche Vorsorge.</span></div>
+          <div class="competitor"><b>ASMC / TACWRK</b><span>Angrenzende Tactical-/Outdoor-Shops, nicht Mainstream-Haushalt.</span></div>
+        </div>
+        <div class="two-col" style="margin-top:22px">
+          <div class="panel reveal">
+            <h3>Was funktioniert</h3>
+            <ul class="list">
+              <li><span><strong>Fertige Pakete</strong> statt Einzelproduktsuche.</span></li>
+              <li><span><strong>72h / 10 / 30 Tage</strong> als einfache Zeitlogik.</span></li>
+              <li><span><strong>MHD und Jahreszahl</strong> als klares Kaufargument.</span></li>
+              <li><span><strong>Blackout- und Notfallrucksack-Pakete</strong> als starke Use Cases.</span></li>
+              <li><span><strong>BBK-Bezug</strong> normalisiert das Thema.</span></li>
+            </ul>
+          </div>
+          <div class="panel reveal">
+            <h3>Was schwach ist</h3>
+            <ul class="list weak">
+              <li><span>Army-/Tactical-Ästhetik und Nischencodes.</span></li>
+              <li><span>Dated Shopdesigns, Kataloggefühl, Rabatt-Überladung.</span></li>
+              <li><span>Produktlisten statt Beratung und Konfigurator.</span></li>
+              <li><span>Wenig Lifecycle: keine starke MHD-/Filter-/Batterie-Logik.</span></li>
+              <li><span>Kaum klare Familien-/B2B-/Haushaltsansprache.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="usa">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div><div class="kicker">USA-Learnings</div><h2>Die Commerce-Logik ist weiter.</h2></div>
+          <p class="lead">Nicht den Ton kopieren. Aber Produktarchitektur, Funnel und Wartungslogik sind hoch relevant.</p>
+        </div>
+        <div class="learn-grid reveal">
+          <div class="learn-card" data-num="01"><h3>Redfora</h3><p>Hero-Kit, Person/Tage-Konfigurator, Refresh-System und Workplace-Funnel.</p></div>
+          <div class="learn-card" data-num="02"><h3>Uncharted</h3><p>Premium-Systeme und Navigation nach Situationen: Flood, Winter, Auto, Fleet.</p></div>
+          <div class="learn-card" data-num="03"><h3>ReadyWise & Co.</h3><p>Food, Water und Power als Bundle-Logik mit hohen Warenkörben.</p></div>
+          <div class="learn-card" data-num="04"><h3>Ready.gov</h3><p>Plan + Kit + Maintain + besondere Bedürfnisse als Content-Backbone.</p></div>
+        </div>
+        <div class="two-col" style="margin-top:22px">
+          <div class="panel reveal"><h3>Adaptieren</h3><ul class="list"><li><span>Konfigurator nach Personen, Tagen, Ort und Sonderbedürfnissen.</span></li><li><span>Refill-Reminder für MHD, Batterien, Filter und First Aid.</span></li><li><span>Use-Case- statt Produktnavigation.</span></li><li><span>B2B-Angebote für Workplaces und Organizations.</span></li></ul></div>
+          <div class="panel reveal"><h3>Nicht adaptieren</h3><ul class="list weak"><li><span>Patriotismus/Freedom-Coding.</span></li><li><span>aggressive Angstsprache.</span></li><li><span>Waffen-/Selbstschutz-Ästhetik als Mainstream.</span></li><li><span>Doom-/Collapse-Marketing.</span></li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="zielgruppen">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div><div class="kicker">Zielgruppen</div><h2>Nicht Prepper. Menschen mit Verantwortung.</h2></div>
+          <p class="lead">Die Marke sollte die psychologische Hürde senken: vorbereitet sein, ohne sich einer extremen Identität anzuschließen.</p>
+        </div>
+        <div class="audience-strip reveal">
+          <div class="audience"><div class="tag">Primär 01</div><h3>Haushalte & Familien</h3><p>Wollen Sicherheit, klare Orientierung und ein gutes Gefühl — ohne Angstkauf.</p></div>
+          <div class="audience"><div class="tag">Primär 02</div><h3>Urbane Professionals</h3><p>Erwarten UX, Design, Transparenz und wollen nicht im Army-Shop kaufen.</p></div>
+          <div class="audience"><div class="tag">Primär 03</div><h3>Büros, Praxen, Kitas</h3><p>Brauchen Rechnung, Standards, Wartung und Standortlogik.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="produkt">
+      <div class="wrap reveal">
+        <div class="product-road">
+          <div class="kicker" style="color:var(--sand)">Produktarchitektur</div>
+          <h2>Der Start sollte aus wenigen, klaren Sets bestehen.</h2>
+          <p class="lead">Nicht zu früh SKU-Wüste. Erst ein System, das Menschen sofort verstehen und später erweitern können.</p>
+          <div class="mvp-grid">
+            <div class="mvp"><small>MVP 1</small><b>72h Starter Kit Zuhause</b><p>Für 1 / 2 / 4 Personen. Niedrige Hürde, erstes System.</p></div>
+            <div class="mvp"><small>MVP 2</small><b>10-Tage Haushalt Set</b><p>BBK-orientierter, seriöser Kern mit modularer Logik.</p></div>
+            <div class="mvp"><small>MVP 3</small><b>Stromausfall Modul</b><p>Licht, Radio, Power, Batterien, sichere Hinweise.</p></div>
+            <div class="mvp"><small>MVP 4</small><b>Auto / Pendler Kit</b><p>Winter, Stau, Panne, Warnung, Wärme, Wasser.</p></div>
+            <div class="mvp"><small>MVP 5</small><b>Office / Praxis / Kita</b><p>Standort-Check, Rechnung, jährliche Wartung.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="brand">
+      <div class="wrap positioning">
+        <div class="claim-card reveal">
+          <div class="kicker">Brand-Positionierung</div>
+          <h2>Vorsorge ohne Panik.</h2>
+          <p>Durchdachte Sets, klare Checklisten und rechtzeitige Erinnerungen für Zuhause, Auto und Arbeit.</p>
+          <div class="cta-row"><a class="btn btn-primary" href="#next">Als Sprint starten</a><a class="btn btn-secondary" href="#moat">Moat ansehen</a></div>
+        </div>
+        <div class="rules reveal">
+          <h3>Markenregeln</h3>
+          <ul>
+            <li><span>ruhig</span><b>statt alarmistisch</b></li>
+            <li><span>zivil</span><b>statt tactical</b></li>
+            <li><span>hilfreich</span><b>statt belehrend</b></li>
+            <li><span>transparent</span><b>statt mystisch</b></li>
+            <li><span>modular</span><b>statt überwältigend</b></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="moat">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div><div class="kicker">Differenzierungs-Moat</div><h2>Der Shop ist nur die Oberfläche.</h2></div>
+          <p class="lead">Der echte Vorsprung entsteht durch Beratung, Wartung, Vertrauen und ein Produkt, das im Haushalt gut funktioniert.</p>
+        </div>
+        <div class="moat-grid reveal">
+          <div class="moat"><b>Guided Commerce</b><p>3-Minuten-Haushaltscheck statt Katalogsuche.</p></div>
+          <div class="moat"><b>Lifecycle</b><p>MHD-, Batterie-, Filter- und First-Aid-Reminder.</p></div>
+          <div class="moat"><b>Designsystem</b><p>Schöne Boxen, Labels, Inventarkarten, QR-Checklisten.</p></div>
+          <div class="moat"><b>Trust Layer</b><p>Expertenprüfung, Inhaltslisten, Sicherheitshinweise.</p></div>
+          <div class="moat"><b>Content Engine</b><p>SEO, Newsletter-Kurs und saisonale Checks.</p></div>
+          <div class="moat"><b>B2B Maintenance</b><p>Jährliche Prüfung und Refill für Standorte.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="next">
+      <div class="wrap risk-plan">
+        <div class="panel risk reveal">
+          <h3>Größte Risiken</h3>
+          <ul class="list weak">
+            <li><span>Zu frühe Sortimentsbreite.</span></li>
+            <li><span>Compliance-Probleme bei Food, Wasser, Medizin, Batterien, Heizung, Messer.</span></li>
+            <li><span>Zu viel Lifestyle ohne Substanz.</span></li>
+            <li><span>Zu viel Angstmarketing.</span></li>
+            <li><span>Keine klare Supply Chain / Margenlogik.</span></li>
+          </ul>
+        </div>
+        <div class="panel plan reveal">
+          <div class="kicker">Erste 30 Tage</div>
+          <h3 style="font-size:34px">Jetzt strukturiert testen.</h3>
+          <div class="steps">
+            <div class="step"><div><b>Namen & Positionierung</b><span>3 Territorien, 30–50 Namen, erste Tests.</span></div></div>
+            <div class="step"><div><b>Produkt-MVP definieren</b><span>72h, 10-Tage, Stromausfall, Auto, B2B.</span></div></div>
+            <div class="step"><div><b>Supplier & Margen</b><span>Food, Wasser, Licht, Power, Hygiene, Boxen, First Aid.</span></div></div>
+            <div class="step"><div><b>Konfigurator skizzieren</b><span>Fragen, Output, Warenkorb-Logik.</span></div></div>
+            <div class="step"><div><b>Landingpage & Interviews</b><span>Prototyp + 15 Kundengespräche + B2B-Testliste.</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final">
+      <div class="wrap reveal">
+        <div class="final-card">
+          <div class="kicker" style="color:var(--sand)">Erste Meinung</div>
+          <h2>Die beste Chance liegt in einem systematisierten Vorsorgeprodukt.</h2>
+          <p>Verständlich wie eine Checkliste. Schön wie ein modernes Home-Produkt. Seriös wie ein Sicherheitsstandard. Wiederkehrend wie ein Wartungsservice.</p>
+          <div class="formula"><span>Checkliste</span><span>Home-Produkt</span><span>Sicherheitsstandard</span><span>Wartungsservice</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <span>Preparedness Commerce · Master Research Synthesis</span>
+      <span>Quelle: /research/2026-05-30-master-research-synthesis.md</span>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
