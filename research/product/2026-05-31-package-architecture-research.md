@@ -719,3 +719,21 @@ Für den nächsten Website-Prototyp sollten wir **5 Pakete sichtbar machen**, ab
 - **Module in Entwicklung:** Wasser & Hygiene, Bereit-Tasche, Familie, Pflege, Haustier.
 
 So wirkt die Marke sofort systematisch, ohne operativ zu breit zu starten.
+
+
+## Konfigurator-Erweiterung: Personen- und Dauer-Slider
+
+Eine interaktive Produktlogik mit zwei Slidern macht strategisch Sinn:
+
+1. **Personen im Haushalt** — bestimmt Packungsgröße, Wasserbedarf, Mahlzeiten, Budget und Lagerplatz.
+2. **Dauer der Vorsorge** — übersetzt abstrakte Krisenvorsorge in konkrete Situationen.
+
+Empfohlene Schwellen für die Website:
+
+- **72 Stunden / 3 Tage:** niedrigster Einstieg, kurzfristige Störung, erste Phase einer Warnlage.
+- **7 Tage:** praktischer Wochenpuffer für Familien, Wetterlagen, Krankheit, Lieferprobleme.
+- **10 Tage:** seriöser deutscher Kern, anschlussfähig an gängige Vorsorgeempfehlungen.
+- **14 Tage:** Ausbau mit Strom-, Wasser-, Hygiene- und Koch-/Wärme-Modulen.
+- **21–30 Tage:** fortgeschrittenes System mit Lagerfläche, MHD-Rotation und Reminder-Service.
+
+Für die erste Website ist die Slider-Logik wertvoll, weil sie den Nutzer nicht mit Produkten startet, sondern mit einer einfachen Frage: **Für wen und für wie lange?** Daraus lässt sich ein Paket, eine Begründung und später ein Warenkorb ableiten.
