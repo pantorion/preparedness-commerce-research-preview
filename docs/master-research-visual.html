@@ -440,6 +440,56 @@
     .formula { display:flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; position: relative; z-index: 1; }
     .formula span { padding: 10px 14px; border-radius: 999px; background: rgba(255,255,255,.10); border: 1px solid rgba(255,255,255,.13); color: rgba(255,255,255,.82); font-weight: 700; }
 
+
+    .card-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .mini-link {
+      min-height: 34px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(23,22,18,.10);
+      background: rgba(255,253,248,.62);
+      color: var(--green-2);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: -.01em;
+    }
+    .mini-link:hover { background: rgba(216,224,210,.58); }
+    .research-library {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .research-card {
+      min-height: 218px;
+      border: 1px solid rgba(23,22,18,.10);
+      border-radius: 26px;
+      background: rgba(255,253,248,.64);
+      padding: 24px;
+      text-decoration: none;
+      box-shadow: 0 16px 44px rgba(33,26,16,.06);
+      transition: transform .22s ease, background .22s ease;
+    }
+    .research-card:hover { transform: translateY(-2px); background: rgba(255,253,248,.88); }
+    .research-card small {
+      display: block;
+      color: var(--green-2);
+      font-size: 12px;
+      font-weight: 850;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 13px;
+    }
+    .research-card b { display:block; font-size: 23px; line-height: 1.03; letter-spacing: -.045em; margin-bottom: 10px; }
+    .research-card p { color: var(--muted); font-size: 14px; line-height: 1.42; margin: 0; }
+
     .footer { padding: 24px 22px 40px; color: var(--muted); font-size: 13px; }
     .footer .wrap { display:flex; justify-content: space-between; gap: 20px; border-top: 1px solid var(--line); padding-top: 20px; }
 
@@ -451,7 +501,7 @@
       .nav { display: none; }
       .hero-grid, .section-head, .thesis, .positioning, .risk-plan { grid-template-columns: 1fr; }
       .kit-visual { min-height: 470px; }
-      .market-grid, .learn-grid, .audience-strip, .moat-grid { grid-template-columns: 1fr 1fr; }
+      .market-grid, .learn-grid, .audience-strip, .moat-grid, .research-library { grid-template-columns: 1fr 1fr; }
       .mvp-grid { grid-template-columns: 1fr 1fr; }
       section { padding: 70px 18px; }
     }
@@ -461,7 +511,7 @@
       .hero-grid { gap: 32px; }
       .kit-visual { min-height: 420px; padding: 20px; border-radius: 30px; }
       .floating-card { display: none; }
-      .market-grid, .learn-grid, .audience-strip, .moat-grid, .mvp-grid, .two-col { grid-template-columns: 1fr; }
+      .market-grid, .learn-grid, .audience-strip, .moat-grid, .mvp-grid, .two-col, .research-library { grid-template-columns: 1fr; }
       .thesis, .claim-card, .rules, .product-road, .final-card { border-radius: 30px; padding: 26px; }
       .panel { padding: 22px; border-radius: 24px; }
       .footer .wrap { flex-direction: column; }
@@ -484,6 +534,7 @@
         <a href="#produkt">Produkt</a>
         <a href="#brand">Marke</a>
         <a href="#next">30 Tage</a>
+        <a href="#research-library">Research</a>
       </nav>
     </div>
   </header>
@@ -498,6 +549,7 @@
           <div class="cta-row">
             <a class="btn btn-primary" href="#synthesis">Die These sehen</a>
             <a class="btn btn-secondary" href="#next">Nächste Schritte</a>
+            <a class="btn btn-secondary" href="research/index.html">Langversion öffnen</a>
           </div>
         </div>
         <div class="kit-visual" aria-label="Visualisierung einer modernen Vorsorge-Box">
@@ -518,6 +570,7 @@
           <div class="kicker">Zentrale These</div>
           <div class="quote">Massenfähig wird Vorsorge, wenn sie wie ein gutes Haushaltssystem wirkt.</div>
           <p>Der deutsche Markt ist real, aber visuell und kommunikativ schwach besetzt. Viele Anbieter haben Sortiment, SEO und Conversion — aber kaum moderne Marke, Guided Commerce, Lifecycle, Design oder vertrauenswürdige Normalisierung.</p>
+          <div class="card-links"><a class="mini-link" href="research/master-synthesis-longform.html">Master-Langfassung</a><a class="mini-link" href="research/index.html">Alle Hintergrunddocs</a></div>
         </div>
       </div>
     </section>
@@ -527,14 +580,15 @@
         <div class="section-head reveal">
           <div><div class="kicker">Marktbild Deutschland</div><h2>Starkes Sortiment. Schwache Inszenierung.</h2></div>
           <p class="lead">Die bestehenden Player beweisen Nachfrage — aber sie lassen Raum für eine Marke, die ruhiger, schöner und einfacher führt.</p>
+          <div class="card-links"><a class="mini-link" href="research/germany-dach-market.html">DACH-Langfassung</a><a class="mini-link" href="research/germany-dach-market.html#produktkategorien-und-bundle-patterns">Produktmuster</a></div>
         </div>
         <div class="market-grid reveal">
-          <div class="competitor"><b>ration1.de</b><span>Stärkster Performance-/Paket-Player. Gute Pakete, Trust, Conversion.</span></div>
-          <div class="competitor"><b>notvorsorge.com</b><span>Breit, SEO-stark, DACH-/Survival-/Zivilschutz-Positionierung.</span></div>
-          <div class="competitor"><b>Prepper-Shop.net</b><span>Thematisch tief, aber alt und nischig — Differenzierungsbeispiel.</span></div>
-          <div class="competitor"><b>Fluchtrucksack.de</b><span>Spezialisiert auf Notfallrucksack/Bug-out, eher Outdoor/Army.</span></div>
-          <div class="competitor"><b>Conserva / Dauerbrot</b><span>Food-/Langzeitnahrung, weniger ganzheitliche Vorsorge.</span></div>
-          <div class="competitor"><b>ASMC / TACWRK</b><span>Angrenzende Tactical-/Outdoor-Shops, nicht Mainstream-Haushalt.</span></div>
+          <div class="competitor"><b>ration1.de</b><span>Stärkster Performance-/Paket-Player. Gute Pakete, Trust, Conversion.</span><div class="card-links"><a class="mini-link" href="research/germany-dach-market.html#1-ration1-de-staerkster-direkter-e-commerce-competitor">Detailanalyse</a><a class="mini-link" href="https://ration1.de/" target="_blank" rel="noreferrer">Webseite</a></div></div>
+          <div class="competitor"><b>notvorsorge.com</b><span>Breit, SEO-stark, DACH-/Survival-/Zivilschutz-Positionierung.</span><div class="card-links"><a class="mini-link" href="research/germany-dach-market.html#2-notvorsorge-com-breites-dach-spezialsortiment">Detailanalyse</a><a class="mini-link" href="https://notvorsorge.com/" target="_blank" rel="noreferrer">Webseite</a></div></div>
+          <div class="competitor"><b>Prepper-Shop.net</b><span>Thematisch tief, aber alt und nischig — Differenzierungsbeispiel.</span><div class="card-links"><a class="mini-link" href="research/germany-dach-market.html#3-prepper-shop-net-alt-aber-thematisch-tief">Detailanalyse</a><a class="mini-link" href="https://www.prepper-shop.net/" target="_blank" rel="noreferrer">Webseite</a></div></div>
+          <div class="competitor"><b>Fluchtrucksack.de</b><span>Spezialisiert auf Notfallrucksack/Bug-out, eher Outdoor/Army.</span><div class="card-links"><a class="mini-link" href="research/germany-dach-market.html#4-fluchtrucksack-de-notfallrucksack-bug-out-spezialisierung">Detailanalyse</a><a class="mini-link" href="https://www.fluchtrucksack.de/" target="_blank" rel="noreferrer">Webseite</a></div></div>
+          <div class="competitor"><b>Conserva / Dauerbrot</b><span>Food-/Langzeitnahrung, weniger ganzheitliche Vorsorge.</span><div class="card-links"><a class="mini-link" href="research/germany-dach-market.html#5-conserva-dauerbrot-lebensmittel-langzeitnahrung">Detailanalyse</a><a class="mini-link" href="https://shop.conserva.de/de/" target="_blank" rel="noreferrer">Conserva</a><a class="mini-link" href="https://www.dauerbrot.de/" target="_blank" rel="noreferrer">Dauerbrot</a></div></div>
+          <div class="competitor"><b>ASMC / TACWRK</b><span>Angrenzende Tactical-/Outdoor-Shops, nicht Mainstream-Haushalt.</span><div class="card-links"><a class="mini-link" href="research/germany-dach-market.html#6-asmc-bw-online-shop-raeer-tacwrk-angrenzende-army-outdoor-tactical-shops">Detailanalyse</a><a class="mini-link" href="https://www.asmc.de/" target="_blank" rel="noreferrer">ASMC</a><a class="mini-link" href="https://www.tacwrk.com/" target="_blank" rel="noreferrer">TACWRK</a></div></div>
         </div>
         <div class="two-col" style="margin-top:22px">
           <div class="panel reveal">
@@ -566,12 +620,13 @@
         <div class="section-head reveal">
           <div><div class="kicker">USA-Learnings</div><h2>Die Commerce-Logik ist weiter.</h2></div>
           <p class="lead">Nicht den Ton kopieren. Aber Produktarchitektur, Funnel und Wartungslogik sind hoch relevant.</p>
+          <div class="card-links"><a class="mini-link" href="research/usa-market-deep-dive.html">USA-Langfassung</a><a class="mini-link" href="research/eu-global-benchmarks.html">EU/Global Benchmarks</a></div>
         </div>
         <div class="learn-grid reveal">
-          <div class="learn-card" data-num="01"><h3>Redfora</h3><p>Hero-Kit, Person/Tage-Konfigurator, Refresh-System und Workplace-Funnel.</p></div>
-          <div class="learn-card" data-num="02"><h3>Uncharted</h3><p>Premium-Systeme und Navigation nach Situationen: Flood, Winter, Auto, Fleet.</p></div>
-          <div class="learn-card" data-num="03"><h3>ReadyWise & Co.</h3><p>Food, Water und Power als Bundle-Logik mit hohen Warenkörben.</p></div>
-          <div class="learn-card" data-num="04"><h3>Ready.gov</h3><p>Plan + Kit + Maintain + besondere Bedürfnisse als Content-Backbone.</p></div>
+          <div class="learn-card" data-num="01"><h3>Redfora</h3><p>Hero-Kit, Person/Tage-Konfigurator, Refresh-System und Workplace-Funnel.</p><div class="card-links"><a class="mini-link" href="research/usa-market-deep-dive.html#redfora">Detailanalyse</a><a class="mini-link" href="https://redfora.com/" target="_blank" rel="noreferrer">Webseite</a></div></div>
+          <div class="learn-card" data-num="02"><h3>Uncharted</h3><p>Premium-Systeme und Navigation nach Situationen: Flood, Winter, Auto, Fleet.</p><div class="card-links"><a class="mini-link" href="research/usa-market-deep-dive.html#uncharted">Detailanalyse</a><a class="mini-link" href="https://unchartedsupplyco.com/" target="_blank" rel="noreferrer">Webseite</a></div></div>
+          <div class="learn-card" data-num="03"><h3>ReadyWise & Co.</h3><p>Food, Water und Power als Bundle-Logik mit hohen Warenkörben.</p><div class="card-links"><a class="mini-link" href="research/usa-market-deep-dive.html#readywise">Detailanalyse</a><a class="mini-link" href="https://readywise.com/" target="_blank" rel="noreferrer">ReadyWise</a><a class="mini-link" href="https://www.mypatriotsupply.com/" target="_blank" rel="noreferrer">MPS</a></div></div>
+          <div class="learn-card" data-num="04"><h3>Ready.gov</h3><p>Plan + Kit + Maintain + besondere Bedürfnisse als Content-Backbone.</p><div class="card-links"><a class="mini-link" href="research/usa-market-deep-dive.html#ready-gov">Detailanalyse</a><a class="mini-link" href="https://www.ready.gov/kit" target="_blank" rel="noreferrer">Webseite</a></div></div>
         </div>
         <div class="two-col" style="margin-top:22px">
           <div class="panel reveal"><h3>Adaptieren</h3><ul class="list"><li><span>Konfigurator nach Personen, Tagen, Ort und Sonderbedürfnissen.</span></li><li><span>Refill-Reminder für MHD, Batterien, Filter und First Aid.</span></li><li><span>Use-Case- statt Produktnavigation.</span></li><li><span>B2B-Angebote für Workplaces und Organizations.</span></li></ul></div>
@@ -585,6 +640,7 @@
         <div class="section-head reveal">
           <div><div class="kicker">Zielgruppen</div><h2>Nicht Prepper. Menschen mit Verantwortung.</h2></div>
           <p class="lead">Die Marke sollte die psychologische Hürde senken: vorbereitet sein, ohne sich einer extremen Identität anzuschließen.</p>
+          <div class="card-links"><a class="mini-link" href="research/brand-audience-communication.html#4-zielgruppen-segmente">Zielgruppen-Details</a><a class="mini-link" href="research/brand-audience-communication.html">Brand-Langfassung</a></div>
         </div>
         <div class="audience-strip reveal">
           <div class="audience"><div class="tag">Primär 01</div><h3>Haushalte & Familien</h3><p>Wollen Sicherheit, klare Orientierung und ein gutes Gefühl — ohne Angstkauf.</p></div>
@@ -617,7 +673,7 @@
           <div class="kicker">Brand-Positionierung</div>
           <h2>Vorsorge ohne Panik.</h2>
           <p>Durchdachte Sets, klare Checklisten und rechtzeitige Erinnerungen für Zuhause, Auto und Arbeit.</p>
-          <div class="cta-row"><a class="btn btn-primary" href="#next">Als Sprint starten</a><a class="btn btn-secondary" href="#moat">Moat ansehen</a></div>
+          <div class="cta-row"><a class="btn btn-primary" href="#next">Als Sprint starten</a><a class="btn btn-secondary" href="#moat">Moat ansehen</a><a class="btn btn-secondary" href="research/brand-audience-communication.html#6-tone-of-voice">Tone of Voice</a></div>
         </div>
         <div class="rules reveal">
           <h3>Markenregeln</h3>
@@ -671,6 +727,23 @@
             <div class="step"><div><b>Konfigurator skizzieren</b><span>Fragen, Output, Warenkorb-Logik.</span></div></div>
             <div class="step"><div><b>Landingpage & Interviews</b><span>Prototyp + 15 Kundengespräche + B2B-Testliste.</span></div></div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="research-library">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div><div class="kicker">Research Library</div><h2>Die Langfassung bleibt einen Klick entfernt.</h2></div>
+          <p class="lead">Die Synthesis ist die schnelle Entscheidungsebene. Wer tiefer einsteigen will, kann die vollständigen Hintergrunddokumente direkt öffnen.</p>
+        </div>
+        <div class="research-library reveal">
+          <a class="research-card" href="research/germany-dach-market.html"><small>Market</small><b>Deutschland / DACH Markt</b><p>Direkte Wettbewerber, Sortimentsmuster, SEO, Content und Differenzierungschancen.</p></a>
+          <a class="research-card" href="research/usa-market-deep-dive.html"><small>Benchmark</small><b>USA Market Deep Dive</b><p>Kits, Konfiguratoren, Refills, Food/Power-Bundles und DTC-Funnel.</p></a>
+          <a class="research-card" href="research/eu-global-benchmarks.html"><small>Benchmark</small><b>EU / Global Benchmarks</b><p>UK, Schweden, Kanada, EVAQ8, LifeStraw und globale Muster.</p></a>
+          <a class="research-card" href="research/brand-audience-communication.html"><small>Brand</small><b>Zielgruppen & Kommunikation</b><p>Psychologie, Tonalität, Designrichtung, Trust-Architektur und Naming.</p></a>
+          <a class="research-card" href="research/master-synthesis-longform.html"><small>Synthesis</small><b>Master Synthesis Langform</b><p>Die lineare Vollfassung der strategischen Zusammenführung.</p></a>
+          <a class="research-card" href="research/systematic-project-plan.html"><small>Plan</small><b>Systematischer Projektplan</b><p>Konkrete nächste Arbeitsschritte für MVP, Supplier, Interviews und Landingpage.</p></a>
         </div>
       </div>
     </section>

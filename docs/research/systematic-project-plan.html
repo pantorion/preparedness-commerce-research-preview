@@ -1,0 +1,306 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Systematischer Projektplan — Preparedness Research</title><meta name="description" content="Konkreter Arbeitsplan für Research, MVP, Supplier, Interviews, Landingpage und Compliance."/><style>
+:root{--paper:#f6f3ee;--paper2:#ebe6dc;--ink:#171612;--muted:#686257;--soft:#fffaf1;--line:rgba(23,22,18,.12);--green:#435b43;--green2:#23362b;--sage:#d8e0d2;--sand:#e7d5b6;--amber:#c98943;--blue:#386073;--white:#fffdf8;--radius:28px;--shadow:0 28px 70px rgba(33,26,16,.10),0 8px 26px rgba(33,26,16,.07);--sans:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;--serif:ui-serif,Georgia,"Times New Roman",serif;--mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace}*{box-sizing:border-box}html{scroll-behavior:smooth} [id]{scroll-margin-top:92px}body{margin:0;color:var(--ink);font-family:var(--sans);letter-spacing:-.02em;overflow-wrap:break-word;background:radial-gradient(circle at 10% 0%,rgba(216,224,210,.85),transparent 32rem),radial-gradient(circle at 92% 6%,rgba(231,213,182,.64),transparent 30rem),linear-gradient(180deg,var(--paper),#fbf7ef 44%,#eee7da)}a{color:inherit}.topbar{position:sticky;top:0;z-index:10;backdrop-filter:blur(22px) saturate(160%);background:rgba(246,243,238,.82);border-bottom:1px solid rgba(23,22,18,.08)}.topbar-inner{max-width:1220px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brandmark{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-size:13px;font-weight:800;letter-spacing:.045em;text-transform:uppercase}.dot{width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,var(--green),var(--green2));box-shadow:inset 0 0 0 6px rgba(255,255,255,.28)}.nav{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted);font-weight:650}.nav a{text-decoration:none}.nav a:hover{color:var(--ink)}.hero{max-width:1220px;margin:0 auto;padding:72px 22px 44px}.eyebrow{display:inline-flex;gap:10px;align-items:center;padding:8px 13px;border:1px solid var(--line);border-radius:999px;background:rgba(255,253,248,.62);color:var(--green2);font-weight:800;font-size:13px}.eyebrow:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px rgba(67,91,67,.12)}h1{font-size:clamp(46px,7vw,92px);line-height:.94;letter-spacing:-.075em;margin:24px 0 18px;max-width:980px}.subtitle{font-size:clamp(19px,2.5vw,27px);line-height:1.22;color:var(--muted);max-width:860px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center;padding:0 20px;border-radius:999px;text-decoration:none;font-weight:800;font-size:15px;border:1px solid var(--line);background:rgba(255,253,248,.58)}.btn.primary{background:var(--green2);color:var(--white);border-color:transparent}.layout{max-width:1220px;margin:0 auto;padding:24px 22px 110px;display:grid;grid-template-columns:280px minmax(0,1fr);gap:34px;align-items:start}.toc{position:sticky;top:72px;border:1px solid var(--line);background:rgba(255,253,248,.62);border-radius:24px;padding:18px;box-shadow:0 14px 40px rgba(33,26,16,.06)}.toc-title{font-size:12px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);font-weight:850;margin-bottom:12px}.toc a{display:block;text-decoration:none;color:var(--muted);font-size:13px;line-height:1.25;padding:8px 0;border-top:1px solid rgba(23,22,18,.06)}.toc a.l2{padding-left:8px;color:var(--ink);font-weight:750}.toc a.l3{padding-left:18px}.toc a:hover{color:var(--green2)}.doc{border:1px solid rgba(23,22,18,.10);background:rgba(255,253,248,.72);border-radius:34px;padding:clamp(28px,5vw,62px);box-shadow:var(--shadow)}.doc h1.doc-title{font-size:clamp(34px,4.6vw,58px);line-height:1.06;letter-spacing:-.055em;margin:0 0 26px}.doc h2{font-size:clamp(28px,3.7vw,44px);line-height:1.06;letter-spacing:-.048em;margin:58px 0 14px;padding-top:14px;border-top:1px solid rgba(23,22,18,.10)}.doc h3{font-size:24px;letter-spacing:-.04em;margin:34px 0 10px}.doc h4{font-size:18px;margin:26px 0 8px}.doc p,.doc li{font-size:17px;line-height:1.62;color:#37332c}.doc p{margin:12px 0}.doc ul,.doc ol{padding-left:22px;margin:12px 0 18px}.doc li{margin:7px 0}.doc strong{color:var(--ink)}.doc code{font-family:var(--mono);font-size:.9em;background:rgba(35,54,43,.08);border:1px solid rgba(35,54,43,.10);padding:.12em .34em;border-radius:7px}.doc blockquote{margin:28px 0;padding:22px 26px;border-radius:24px;background:linear-gradient(135deg,rgba(216,224,210,.68),rgba(255,253,248,.72));border:1px solid rgba(67,91,67,.18)}.doc blockquote p{font-size:22px;line-height:1.35;color:var(--green2);font-weight:760}.doc a{color:var(--green2);text-decoration-thickness:1px;text-underline-offset:3px;overflow-wrap:anywhere}.sourcebar{margin-top:24px;display:flex;flex-wrap:wrap;gap:10px;color:var(--muted);font-size:13px}.pill{border:1px solid var(--line);background:rgba(255,253,248,.54);border-radius:999px;padding:8px 12px;font-weight:700}.footer{max-width:1220px;margin:0 auto;padding:28px 22px 42px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}@media(max-width:900px){.nav{display:none}.layout{grid-template-columns:1fr;padding-top:8px}.toc{position:relative;top:0;max-height:38vh;overflow:auto}.hero{padding-top:46px}.doc{border-radius:26px;padding:24px}.doc h1.doc-title{font-size:clamp(31px,8vw,42px)}.doc h2{margin-top:44px}.doc p,.doc li{font-size:16px}.btn{width:100%}}</style></head><body><header class="topbar"><div class="topbar-inner"><a class="brandmark" href="../master-research-visual.html#research-library"><span class="dot"></span><span>Preparedness Research</span></a><nav class="nav"><a href="../master-research-visual.html">Synthesis</a><a href="index.html">Research-Hub</a><a href="#top">Nach oben</a></nav></div></header><main id="top"><section class="hero"><div class="eyebrow">Langversion · 30.05.2026</div><h1>Systematischer Projektplan</h1><p class="subtitle">Konkreter Arbeitsplan für Research, MVP, Supplier, Interviews, Landingpage und Compliance.</p><div class="hero-actions"><a class="btn primary" href="../master-research-visual.html">Zurück zur Synthesis</a><a class="btn" href="index.html">Alle Research-Dokumente</a></div><div class="sourcebar"><span class="pill">Quelle: plans/2026-05-30-systematic-project-plan.md</span><span class="pill">Vollständige Markdown-Langfassung als HTML</span></div></section><div class="layout"><aside class="toc"><div class="toc-title">Inhalt</div><a class="l1" href="#systematischer-projektplan-preparedness-commerce-germany">Systematischer Projektplan: Preparedness Commerce Germany</a>
+<a class="l2" href="#ziel">Ziel</a>
+<a class="l2" href="#arbeitsprinzipien">Arbeitsprinzipien</a>
+<a class="l2" href="#phase-1-foundation-research-closure">Phase 1 — Foundation &amp; Research Closure</a>
+<a class="l3" href="#task-1-research-set-lesen-und-annotieren">Task 1: Research-Set lesen und annotieren</a>
+<a class="l3" href="#task-2-wettbewerber-map-bauen">Task 2: Wettbewerber-Map bauen</a>
+<a class="l3" href="#task-3-source-inventory-pflegen">Task 3: Source Inventory pflegen</a>
+<a class="l2" href="#phase-2-customer-discovery">Phase 2 — Customer Discovery</a>
+<a class="l3" href="#task-4-zielgruppen-hypothesen-finalisieren">Task 4: Zielgruppen-Hypothesen finalisieren</a>
+<a class="l3" href="#task-5-interviewleitfaden-schreiben">Task 5: Interviewleitfaden schreiben</a>
+<a class="l3" href="#task-6-b2b-pilotliste-erstellen">Task 6: B2B-Pilotliste erstellen</a>
+<a class="l2" href="#phase-3-product-architecture">Phase 3 — Product Architecture</a>
+<a class="l3" href="#task-7-mvp-sets-definieren">Task 7: MVP-Sets definieren</a>
+<a class="l3" href="#task-8-supplier-research">Task 8: Supplier Research</a>
+<a class="l3" href="#task-9-refill-und-reminder-logik-entwerfen">Task 9: Refill- und Reminder-Logik entwerfen</a>
+<a class="l2" href="#phase-4-brand-naming-design">Phase 4 — Brand, Naming, Design</a>
+<a class="l3" href="#task-10-naming-sprint">Task 10: Naming Sprint</a>
+<a class="l3" href="#task-11-positionierungsrouten">Task 11: Positionierungsrouten</a>
+<a class="l3" href="#task-12-visual-moodboards">Task 12: Visual Moodboards</a>
+<a class="l2" href="#phase-5-digital-funnel-prototype">Phase 5 — Digital Funnel Prototype</a>
+<a class="l3" href="#task-13-landingpage-struktur">Task 13: Landingpage-Struktur</a>
+<a class="l3" href="#task-14-konfigurator-flow">Task 14: Konfigurator-Flow</a>
+<a class="l3" href="#task-15-newsletter-lead-magnet">Task 15: Newsletter-Lead-Magnet</a>
+<a class="l2" href="#phase-6-validation">Phase 6 — Validation</a>
+<a class="l3" href="#task-16-smoke-test">Task 16: Smoke Test</a>
+<a class="l3" href="#task-17-pricing-test">Task 17: Pricing Test</a>
+<a class="l3" href="#task-18-first-pilot">Task 18: First Pilot</a>
+<a class="l2" href="#erste-konkrete-naechste-schritte">Erste konkrete nächste Schritte</a>
+<a class="l2" href="#definition-of-done-fuer-die-naechste-woche">Definition of Done für die nächste Woche</a></aside><article class="doc"><h1 id="systematischer-projektplan-preparedness-commerce-germany" class="doc-title">Systematischer Projektplan: Preparedness Commerce Germany</h1>
+<p>Stand: 2026-05-30</p>
+<blockquote>
+<p>Zweck: Das Projekt strukturiert starten, bevor Name, Marke, Sortiment oder Website vorschnell festgelegt werden.</p>
+</blockquote>
+<h2 id="ziel" class="">Ziel</h2>
+<p>Eine moderne, differenzierte Preparedness-Commerce-Marke für Deutschland entwickeln: online-first, vertrauenswürdig, einfach verständlich, stark gestaltet, mit klarem Produkt-MVP und wiederkehrendem Lifecycle.</p>
+<h2 id="arbeitsprinzipien" class="">Arbeitsprinzipien</h2>
+<ol>
+<li><strong>Research before taste</strong> — erst Markt, Kunden, Produkte, Compliance verstehen.</li>
+<li><strong>Start narrow, design broad</strong> — mit wenigen starken Sets starten, aber als System denken.</li>
+<li><strong>No fear marketing</strong> — ruhig, zivil, hilfreich.</li>
+<li><strong>Guided commerce over catalog</strong> — Nutzer sollen nicht 300 SKUs verstehen müssen.</li>
+<li><strong>Lifecycle from day one</strong> — MHD, Batterien, Filter, First Aid, saisonale Checks.</li>
+<li><strong>Trust is the product</strong> — transparente Inhaltslisten, Expertensicht, Sicherheitshinweise.</li>
+</ol>
+<p>---</p>
+<h2 id="phase-1-foundation-research-closure" class="">Phase 1 — Foundation &amp; Research Closure</h2>
+<h3 id="task-1-research-set-lesen-und-annotieren" class="">Task 1: Research-Set lesen und annotieren</h3>
+<p><strong>Dateien</strong></p>
+<ul>
+<li><code>research/2026-05-30-master-research-synthesis.md</code></li>
+<li><code>research/market/2026-05-30-germany-dach-market-research.md</code></li>
+<li><code>research/market/2026-05-30-usa-market-deep-dive.md</code></li>
+<li><code>research/market/2026-05-30-eu-global-benchmark-research.md</code></li>
+<li><code>research/brand/2026-05-30-brand-audience-communication-research.md</code></li>
+</ul>
+<p><strong>Output</strong></p>
+<ul>
+<li>Liste offener Fragen.</li>
+<li>Top-10 Hypothesen.</li>
+<li>Top-10 Risiken.</li>
+</ul>
+<h3 id="task-2-wettbewerber-map-bauen" class="">Task 2: Wettbewerber-Map bauen</h3>
+<p><strong>Ziel</strong></p>
+<p>Alle relevanten Wettbewerber nach Positionierung, Sortiment, Designqualität, Funnel, Preislogik und Differenzierung mappen.</p>
+<p><strong>Output</strong></p>
+<ul>
+<li><code>research/market/competitor-map.md</code></li>
+<li>Bewertungsachsen:</li>
+<li>Modernität</li>
+<li>Trust</li>
+<li>Sortimentstiefe</li>
+<li>Guided Commerce</li>
+<li>B2B</li>
+<li>Lifecycle</li>
+<li>Preisniveau</li>
+</ul>
+<h3 id="task-3-source-inventory-pflegen" class="">Task 3: Source Inventory pflegen</h3>
+<p><strong>Ziel</strong></p>
+<p>Alle URLs aus der Recherche in einer Quelle halten.</p>
+<p><strong>Output</strong></p>
+<ul>
+<li><code>research/sources/source-inventory.md</code></li>
+</ul>
+<p>---</p>
+<h2 id="phase-2-customer-discovery" class="">Phase 2 — Customer Discovery</h2>
+<h3 id="task-4-zielgruppen-hypothesen-finalisieren" class="">Task 4: Zielgruppen-Hypothesen finalisieren</h3>
+<p><strong>Segmente</strong></p>
+<ul>
+<li>Familienhaushalte.</li>
+<li>urbane Professionals.</li>
+<li>Hausbesitzer.</li>
+<li>B2B: Büros, Praxen, Kitas, Schulen, Hausverwaltungen.</li>
+<li>Pflege/Senioren/vulnerable Haushalte.</li>
+</ul>
+<p><strong>Output</strong></p>
+<ul>
+<li><code>research/brand/audience-segments.md</code></li>
+</ul>
+<h3 id="task-5-interviewleitfaden-schreiben" class="">Task 5: Interviewleitfaden schreiben</h3>
+<p><strong>Ziel</strong></p>
+<p>15–20 Gespräche führen, bevor Sortiment finalisiert wird.</p>
+<p><strong>Fragen</strong></p>
+<ul>
+<li>Was löst das Thema aus?</li>
+<li>Welche Szenarien wirken real?</li>
+<li>Was schreckt ab?</li>
+<li>Was wäre ein akzeptabler Preis?</li>
+<li>Was soll fertig sein vs. selbst kaufbar?</li>
+<li>Welche Ästhetik wirkt vertrauenswürdig?</li>
+<li>Würden Erinnerungen/Refills genutzt?</li>
+</ul>
+<p><strong>Output</strong></p>
+<ul>
+<li><code>research/customer-interviews/interview-guide.md</code></li>
+</ul>
+<h3 id="task-6-b2b-pilotliste-erstellen" class="">Task 6: B2B-Pilotliste erstellen</h3>
+<p><strong>Ziel</strong></p>
+<p>20 potenzielle Pilotkunden definieren.</p>
+<p><strong>Output</strong></p>
+<ul>
+<li>Praxen, Agenturen, Kitas, Coworking, Hausverwaltungen, kleine Büros.</li>
+</ul>
+<p>---</p>
+<h2 id="phase-3-product-architecture" class="">Phase 3 — Product Architecture</h2>
+<h3 id="task-7-mvp-sets-definieren" class="">Task 7: MVP-Sets definieren</h3>
+<p><strong>Startkandidaten</strong></p>
+<ol>
+<li>72h Starter Kit Zuhause.</li>
+<li>10-Tage Haushalt Set.</li>
+<li>Stromausfall Modul.</li>
+<li>Auto / Pendler Kit.</li>
+<li>Office / Praxis / Kita Kit.</li>
+</ol>
+<p><strong>Output</strong></p>
+<ul>
+<li><code>research/product/mvp-set-architecture.md</code></li>
+<li>Pro Set:</li>
+<li>Zielgruppe</li>
+<li>Use Case</li>
+<li>Inhaltsliste</li>
+<li>Basis/Premium-Variante</li>
+<li>geschätzter EK/VK</li>
+<li>MHD/Wartung</li>
+<li>Compliance-Hinweise</li>
+</ul>
+<h3 id="task-8-supplier-research" class="">Task 8: Supplier Research</h3>
+<p><strong>Kategorien</strong></p>
+<ul>
+<li>Nahrung / Langzeitnahrung.</li>
+<li>Wasser / Kanister / Filter / Tabletten.</li>
+<li>Licht / Radio / Batterien.</li>
+<li>Powerbanks / Powerstations / Solar.</li>
+<li>Hygiene / Nottoilette.</li>
+<li>Erste Hilfe.</li>
+<li>Boxen / Taschen / Labels.</li>
+</ul>
+<p><strong>Output</strong></p>
+<ul>
+<li><code>research/product/supplier-shortlist.md</code></li>
+</ul>
+<h3 id="task-9-refill-und-reminder-logik-entwerfen" class="">Task 9: Refill- und Reminder-Logik entwerfen</h3>
+<p><strong>Output</strong></p>
+<ul>
+<li><code>research/product/lifecycle-refill-model.md</code></li>
+</ul>
+<p>Mögliche Reminder:</p>
+<ul>
+<li>MHD Food.</li>
+<li>Wasser / Filter.</li>
+<li>Batterien.</li>
+<li>Erste Hilfe.</li>
+<li>Dokumente.</li>
+<li>saisonale Checks.</li>
+</ul>
+<p>---</p>
+<h2 id="phase-4-brand-naming-design" class="">Phase 4 — Brand, Naming, Design</h2>
+<h3 id="task-10-naming-sprint" class="">Task 10: Naming Sprint</h3>
+<p><strong>Output</strong></p>
+<ul>
+<li>50 Namen in Territorien:</li>
+<li>ruhige Vorsorge,</li>
+<li>Zuhause / Haushalt,</li>
+<li>System / Ordnung,</li>
+<li>72h / 10 Tage,</li>
+<li>modern-premium.</li>
+</ul>
+<h3 id="task-11-positionierungsrouten" class="">Task 11: Positionierungsrouten</h3>
+<p><strong>Mindestens 3 Routen</strong></p>
+<ol>
+<li>Vorsorge ohne Panik.</li>
+<li>Der 10-Tage-Plan für dein Zuhause.</li>
+<li>Das moderne Preparedness-System für Haushalt und Arbeit.</li>
+</ol>
+<p><strong>Output</strong></p>
+<ul>
+<li>Claim, Subline, Beispiel-Hero, Tonalität, Do/Don’t.</li>
+</ul>
+<h3 id="task-12-visual-moodboards" class="">Task 12: Visual Moodboards</h3>
+<p><strong>Richtungen</strong></p>
+<ul>
+<li>Warm editorial home.</li>
+<li>Technical trust / modular system.</li>
+<li>Premium utility.</li>
+</ul>
+<p><strong>Avoid</strong></p>
+<ul>
+<li>Tactical black/camo.</li>
+<li>Apokalypse.</li>
+<li>Discount survival shop.</li>
+</ul>
+<p>---</p>
+<h2 id="phase-5-digital-funnel-prototype" class="">Phase 5 — Digital Funnel Prototype</h2>
+<h3 id="task-13-landingpage-struktur" class="">Task 13: Landingpage-Struktur</h3>
+<p><strong>Abschnitte</strong></p>
+<ol>
+<li>Hero: Vorsorge ohne Panik.</li>
+<li>3-Minuten-Check.</li>
+<li>Empfohlene Sets.</li>
+<li>Was ist drin und warum?</li>
+<li>BBK-orientierte Checklisten.</li>
+<li>Reminder/Refill.</li>
+<li>B2B/Teams.</li>
+<li>Newsletter: 10 Tage vorbereitet.</li>
+</ol>
+<p><strong>Output</strong></p>
+<ul>
+<li><code>plans/landingpage-v1.md</code></li>
+</ul>
+<h3 id="task-14-konfigurator-flow" class="">Task 14: Konfigurator-Flow</h3>
+<p><strong>Fragen</strong></p>
+<ul>
+<li>Personen?</li>
+<li>Tage?</li>
+<li>Ort?</li>
+<li>Kinder/Pets/Pflege?</li>
+<li>Risiken?</li>
+<li>Budget?</li>
+</ul>
+<p><strong>Output</strong></p>
+<ul>
+<li><code>plans/configurator-flow-v1.md</code></li>
+</ul>
+<h3 id="task-15-newsletter-lead-magnet" class="">Task 15: Newsletter-Lead-Magnet</h3>
+<p><strong>Output</strong></p>
+<ul>
+<li>„10 Tage vorbereitet“ E-Mail-Kurs:</li>
+<li>Tag 1: Risiken und Warn-Apps.</li>
+<li>Tag 2: Wasser.</li>
+<li>Tag 3: Nahrung.</li>
+<li>Tag 4: Licht/Kommunikation.</li>
+<li>Tag 5: Hygiene.</li>
+<li>Tag 6: Wärme/Kochen.</li>
+<li>Tag 7: Erste Hilfe.</li>
+<li>Tag 8: Dokumente/Bargeld.</li>
+<li>Tag 9: Auto/Arbeit.</li>
+<li>Tag 10: Wartung/Reminder.</li>
+</ul>
+<p>---</p>
+<h2 id="phase-6-validation" class="">Phase 6 — Validation</h2>
+<h3 id="task-16-smoke-test" class="">Task 16: Smoke Test</h3>
+<p><strong>Ziel</strong></p>
+<p>Vor Einkauf großer Ware Nachfrage testen.</p>
+<p><strong>Möglichkeiten</strong></p>
+<ul>
+<li>Landingpage mit Warteliste.</li>
+<li>3 Produkt-Dummies mit Preisen.</li>
+<li>Newsletter-Download.</li>
+<li>B2B-Angebotsformular.</li>
+<li>Ads klein testen.</li>
+</ul>
+<h3 id="task-17-pricing-test" class="">Task 17: Pricing Test</h3>
+<p><strong>Preisanker</strong></p>
+<ul>
+<li>72h Starter: niedrig/mittel/premium.</li>
+<li>10-Tage Set: modular.</li>
+<li>Stromausfall Modul: Basic/Premium.</li>
+<li>B2B Kit: pro Standort/Person.</li>
+</ul>
+<h3 id="task-18-first-pilot" class="">Task 18: First Pilot</h3>
+<p><strong>Ziel</strong></p>
+<p>10–20 echte Beta-Käufer oder B2B-Pilotstandorte.</p>
+<p><strong>Output</strong></p>
+<ul>
+<li>Feedback zu Inhalt, Preis, Verpackung, Vertrauen, Wartung.</li>
+</ul>
+<p>---</p>
+<h2 id="erste-konkrete-naechste-schritte" class="">Erste konkrete nächste Schritte</h2>
+<ol>
+<li>Projekt mit Uli besprechen und Arbeitsnamen festlegen.</li>
+<li>Research gemeinsam lesen: Master-Synthesis zuerst.</li>
+<li>Entscheiden: B2C-first, B2B-first oder dual MVP?</li>
+<li>Naming Sprint starten.</li>
+<li>MVP-Sets ausarbeiten und grobe EK/VK prüfen.</li>
+<li>15 Customer Interviews terminieren.</li>
+<li>Landingpage-/Konfigurator-Prototyp entwerfen.</li>
+</ol>
+<h2 id="definition-of-done-fuer-die-naechste-woche" class="">Definition of Done für die nächste Woche</h2>
+<ul>
+<li>Name-Arbeitshypothese oder 3 Shortlist-Richtungen.</li>
+<li>3 priorisierte MVP-Angebote.</li>
+<li>erste Supplier-Liste.</li>
+<li>Interviewleitfaden.</li>
+<li>Landingpage-Outline.</li>
+<li>Entscheidung, ob B2C oder B2B der erste Testkanal wird.</li>
+</ul></article></div></main><footer class="footer">Preparedness Commerce · Research Langfassung · Quelle: plans/2026-05-30-systematic-project-plan.md</footer></body></html>
